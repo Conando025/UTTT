@@ -1,0 +1,94 @@
+:root {
+    --board-bg-color: antiquewhite;
+}
+
+.cell {
+    width: 4vw;
+    aspect-ratio: 1;
+    cursor: pointer;
+    background-color: var(--board-bg-color);
+    background-size: cover;
+}
+
+.cell:hover {
+    background-color: rgb(255, 142, 142);
+}
+
+.small-board:hover {
+    background-color: rgb(133, 133, 255);
+}
+
+.small-board {
+    background-color: var(--board-bg-color);
+    padding: 0.5vw;
+    aspect-ratio: 11; 
+    position: relative;   
+}
+
+.small-board-grid {
+    width: min-content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 0.25vw;
+    row-gap: 0.25vw;
+    background-color: black;
+}
+
+
+.big-board {
+    padding: 0.5vw;
+    aspect-ratio: 1;
+    width: min-content;
+    background-color: var(--board-bg-color);
+    border-radius: 1vw; 
+}
+
+.big-board-grid {
+    display: grid;
+    width: min-content;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 0.5vw;
+    row-gap: 0.5vw;
+    background-color: black;
+}
+
+.winner-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-size: cover;
+}
+
+.cell[data-content="o"] {
+    background-image: url(nought.svg);
+    pointer-events: none;
+}
+
+.cell[data-content="x"] {
+    background-image: url(cross.svg);
+    pointer-events: none;
+}
+
+
+.small-board:not([data-content=""]) .small-board-grid {
+    filter: blur(3px);
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.small-board[data-content="x"] .winner-overlay {
+    background-image: url(cross.svg);
+}
+
+.small-board[data-content="o"] .winner-overlay {
+    background-image: url(nought.svg);
+}
+
+.small-board:not([data-content=""]) .cell {
+    pointer-events: none;
+}

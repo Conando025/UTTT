@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="game.css">
+    <title>UTTT</title>
+    <script defer src="logic.js"></script>
+</head>
+
+<body>
+    <div class="big-board">
+        <div class="big-board-grid">
+            <div class="small-board" id="b0" data-content="">
+                <div class="small-board-grid">
+                    <div class="cell c0" data-content=""></div>
+                    <div class="cell c1" data-content=""></div>
+                    <div class="cell c2" data-content=""></div>
+                    <div class="cell c3" data-content=""></div>
+                    <div class="cell c4" data-content=""></div>
+                    <div class="cell c5" data-content=""></div>
+                    <div class="cell c6" data-content=""></div>
+                    <div class="cell c7" data-content=""></div>
+                    <div class="cell c8" data-content=""></div>
+                </div>
+                <div class="winner-overlay"></div>
+            </div>
+            <div class="small-board" id="b1" data-content="">
+                <div class="small-board-grid">
+                    <div class="cell c0" data-content=""></div>
+                    <div class="cell c1" data-content=""></div>
+                    <div class="cell c2" data-content=""></div>
+                    <div class="cell c3" data-content=""></div>
+                    <div class="cell c4" data-content=""></div>
+                    <div class="cell c5" data-content=""></div>
+                    <div class="cell c6" data-content=""></div>
+                    <div class="cell c7" data-content=""></div>
+                    <div class="cell c8" data-content=""></div>
+                </div>
+                <div class="winner-overlay"></div>
+            </div>
+            <div class="small-board" id="b2" data-content="">
+                <div class="small-board-grid">
+                    <div class="cell c0" data-content=""></div>
+                    <div class="cell c1" data-content=""></div>
+                    <div class="cell c2" data-content=""></div>
+                    <div class="cell c3" data-content=""></div>
+                    <div class="cell c4" data-content=""></div>
+                    <div class="cell c5" data-content=""></div>
+                    <div class="cell c6" data-content=""></div>
+                    <div class="cell c7" data-content=""></div>
+                    <div class="cell c8" data-content=""></div>
+                </div>
+                <div class="winner-overlay"></div>
+            </div>
+            <div class="small-board" id="b3" data-content="">
+                <div class="small-board-grid">
+                    <div class="cell c0" data-content=""></div>
+                    <div class="cell c1" data-content=""></div>
+                    <div class="cell c2" data-content=""></div>
+                    <div class="cell c3" data-content=""></div>
+                    <div class="cell c4" data-content=""></div>
+                    <div class="cell c5" data-content=""></div>
+                    <div class="cell c6" data-content=""></div>
+                    <div class="cell c7" data-content=""></div>
+                    <div class="cell c8" data-content=""></div>
+                </div>
+                <div class="winner-overlay"></div>
+            </div>
+            <div class="small-board" id="b4" data-content="">
+                <div class="small-board-grid">
+                    <div class="cell c0" data-content=""></div>
+                    <div class="cell c1" data-content=""></div>
+                    <div class="cell c2" data-content=""></div>
+                    <div class="cell c3" data-content=""></div>
+                    <div class="cell c4" data-content=""></div>
+                    <div class="cell c5" data-content=""></div>
+                    <div class="cell c6" data-content=""></div>
+                    <div class="cell c7" data-content=""></div>
+                    <div class="cell c8" data-content=""></div>
+                </div>
+                <div class="winner-overlay"></div>
+            </div>
+            <div class="small-board" id="b5" data-content="">
+                <div class="small-board-grid">
+                    <div class="cell c0" data-content=""></div>
+                    <div class="cell c1" data-content=""></div>
+                    <div class="cell c2" data-content=""></div>
+                    <div class="cell c3" data-content=""></div>
+                    <div class="cell c4" data-content=""></div>
+                    <div class="cell c5" data-content=""></div>
+                    <div class="cell c6" data-content=""></div>
+                    <div class="cell c7" data-content=""></div>
+                    <div class="cell c8" data-content=""></div>
+                </div>
+                <div class="winner-overlay"></div>
+            </div>
+            <div class="small-board" id="b6" data-content="">
+                <div class="small-board-grid">
+                    <div class="cell c0" data-content=""></div>
+                    <div class="cell c1" data-content=""></div>
+                    <div class="cell c2" data-content=""></div>
+                    <div class="cell c3" data-content=""></div>
+                    <div class="cell c4" data-content=""></div>
+                    <div class="cell c5" data-content=""></div>
+                    <div class="cell c6" data-content=""></div>
+                    <div class="cell c7" data-content=""></div>
+                    <div class="cell c8" data-content=""></div>
+                </div>
+                <div class="winner-overlay"></div>
+            </div>
+            <div class="small-board" id="b7" data-content="">
+                <div class="small-board-grid">
+                    <div class="cell c0" data-content=""></div>
+                    <div class="cell c1" data-content=""></div>
+                    <div class="cell c2" data-content=""></div>
+                    <div class="cell c3" data-content=""></div>
+                    <div class="cell c4" data-content=""></div>
+                    <div class="cell c5" data-content=""></div>
+                    <div class="cell c6" data-content=""></div>
+                    <div class="cell c7" data-content=""></div>
+                    <div class="cell c8" data-content=""></div>
+                </div>
+                <div class="winner-overlay"></div>
+            </div>
+            <div class="small-board" id="b8" data-content="">
+                <div class="small-board-grid">
+                    <div class="cell c0" data-content=""></div>
+                    <div class="cell c1" data-content=""></div>
+                    <div class="cell c2" data-content=""></div>
+                    <div class="cell c3" data-content=""></div>
+                    <div class="cell c4" data-content=""></div>
+                    <div class="cell c5" data-content=""></div>
+                    <div class="cell c6" data-content=""></div>
+                    <div class="cell c7" data-content=""></div>
+                    <div class="cell c8" data-content=""></div>
+                </div>
+                <div class="winner-overlay"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

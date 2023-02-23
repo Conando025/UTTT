@@ -1,0 +1,37 @@
+:root {
+    --bg-color: #333;
+    --color: #d3d3d3;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--color);
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+    width: 100vw;
+    height: 100vh;
+    flex-basis: 1 auto;
+}
+
+
+main {
+    display: flex;
+    flex-direction: row;
+    column-gap: 3em;
+    width: 80vw;
+    justify-content: center;
+}
+
+.big-board {
+    flex: none;
+}
+
+.controlls {
+    flex: 3 1 auto;
+    width: fit-content;
+    max-width: 20vw;
+    background-color: #222;
+}
