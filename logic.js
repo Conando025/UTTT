@@ -80,7 +80,7 @@ function apply_move(b_index, c_index, target) {
     target.parentElement.parentElement.setAttribute("data-content", game_state.boards[b_index].update_state());
     let next_board_state = game_state.boards[c_index].state;
     let boards = document.getElementsByClassName("small-board");
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 9; i++) {
         let v = `${next_board_state == "" ? (i == c_index) : true}`;
         boards[i].setAttribute("data-placeable", v);
     }

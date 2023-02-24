@@ -1,5 +1,5 @@
 :root {
-    --board-bg-color: antiquewhite;
+    --board-bg-color: rgb(255, 233, 200);
 }
 
 .cell {
@@ -11,11 +11,11 @@
 }
 
 .cell:hover {
-    background-color: rgb(255, 142, 142);
+    background-color: #ebcaff;
 }
 
-.small-board:hover {
-    background-color: rgb(133, 133, 255);
+.small-board[data-placeable="true"] {
+    background-color: #a8fac7;
 }
 
 .small-board {
