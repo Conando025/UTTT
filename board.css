@@ -1,5 +1,6 @@
 :root {
     --board-bg-color: rgb(255, 233, 200);
+    --next-piece: url(cross.svg);
 }
 
 .cell {
@@ -12,6 +13,7 @@
 
 .cell:hover {
     background-color: #ebcaff;
+    background-image: var(--next-piece);
 }
 
 .small-board[data-placeable="true"] {

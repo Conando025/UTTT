@@ -83,7 +83,6 @@ function reset() {
         e.setAttribute("data-content", "");
     }
     game_state = new BBoard();
-    x_next = false;
     move_history.innerHTML = "";
 }
 
@@ -91,8 +90,9 @@ let x_next = true;
 let game_state = new BBoard();
 let move_history = document.getElementById("move-history");
 
-function next() {
+function next() {   
     x_next = !x_next;
+    document.querySelector(':root').style.setProperty('--next-piece', x_next ? 'url(cross.svg)' : 'url(nought.svg)');
     return x_next ? "o" : "x";
 }
 
