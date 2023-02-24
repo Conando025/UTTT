@@ -1,5 +1,6 @@
 :root {
     --bg-color: #333;
+    --bg-color-alt: #353535;
     --color: #d3d3d3;
 }
 
@@ -34,6 +35,7 @@ main {
     width: fit-content;
     max-width: 20vw;
     background-color: #222;
+    padding: 1rem;
 }
 
 #move-history  {
@@ -43,4 +45,30 @@ main {
 
 #move-history > p {
     margin: 0.5em;
+}
+
+#game-history {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 1em;
+    margin: 1em;
+}
+
+#game-history > * {
+    aspect-ratio: 1;
+    background-color: var(--bg-color-alt);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#game-history > * > * {
+    margin: 0.5rem;
+}
+
+.score {
+    font-size: 1.5rem;
 }

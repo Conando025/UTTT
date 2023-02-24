@@ -41,7 +41,7 @@ class SBoard {
 }
 
 function three_in_a_row(a, b, c) {
-    return (a == b && b == c && b != "")
+    return (a == b && b == c && b != "" && b != 'd')
 }
 
 class BBoard {
@@ -51,6 +51,26 @@ class BBoard {
 
     reset() {
         this.boards = [new SBoard(), new SBoard(), new SBoard(), new SBoard(), new SBoard(), new SBoard(), new SBoard(), new SBoard(), new SBoard()];
+    }
+
+    state() {
+        if (three_in_a_row(this.boards[0].state, this.boards[4].state, this.boards[8].state) || three_in_a_row(this.boards[2].state, this.boards[4].state, this.boards[6].state)) {
+            return this.boards[4].state;
+        }
+        for (let i = 0; i < 3; i++) {
+            if (three_in_a_row(this.boards[0 + i * 3].state, this.boards[1 + i * 3].state, this.boards[2 + i * 3].state)) {
+                return this.boards[0 + i * 3].state;
+            }
+            if (three_in_a_row(this.boards[0 + i].state, this.boards[3 + i].state, this.boards[6 + i].state)) {
+                return this.boards[0 + i].state;
+            }
+        }
+        for (const board of this.boards) {
+            if (board.state == "") {
+                return "";
+            }
+        }
+        return "d";
     }
 }
 
@@ -81,12 +101,6 @@ function apply_move(b_index, c_index, target) {
     game_state.boards[b_index].cells[c_index] = player;
     target.setAttribute("data-content", player);
     target.parentElement.parentElement.setAttribute("data-content", game_state.boards[b_index].update_state());
-    let next_board_state = game_state.boards[c_index].state;
-    let boards = document.getElementsByClassName("small-board");
-    for (let i = 0; i < 9; i++) {
-        let v = `${next_board_state == "" ? (i == c_index) : true}`;
-        boards[i].setAttribute("data-placeable", v);
-    }
 
     const isScrolledToBottom = move_history.scrollHeight - move_history.clientHeight <= move_history.scrollTop + 1;
     const move = document.createElement('p');
@@ -95,7 +109,21 @@ function apply_move(b_index, c_index, target) {
     if (isScrolledToBottom) {
         move_history.scrollTop = move_history.scrollHeight;
     }
-
+    let boards = document.getElementsByClassName("small-board");
+    if(game_state.state() != ''){
+        for (let i = 0; i < 9; i++) {
+            boards[i].setAttribute("data-placeable", 'false');
+        }
+        let i = game_state.state() == 'd' ? 1 : (game_state.state() == 'x' ? 0 : 2);
+        let score = document.getElementsByClassName('score')[i];
+        score.innerText = Number(score.innerText) + 1
+    } else {
+        let next_board_state = game_state.boards[c_index].state;
+        for (let i = 0; i < 9; i++) {
+            let v = `${next_board_state == "" ? (i == c_index) : true}`;
+            boards[i].setAttribute("data-placeable", v);
+        }
+    }
 }
 
 for (const element of document.getElementsByClassName("cell")) {
