@@ -21,7 +21,7 @@
 .small-board {
     background-color: var(--board-bg-color);
     padding: 0.5vw;
-    aspect-ratio: 11; 
+    aspect-ratio: 1; 
     position: relative;   
 }
 
@@ -90,5 +90,9 @@
 }
 
 .small-board:not([data-content=""]) .cell {
+    pointer-events: none;
+}
+
+.small-board[data-placeable="false"] .cell {
     pointer-events: none;
 }

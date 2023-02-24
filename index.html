@@ -14,9 +14,9 @@
 <body>
     <h1>Ultimate TicTacToe</h1>
     <main>
-        <div class="big-board">
+        <div class="big-board" data-next-move="b1">
             <div class="big-board-grid">
-                <div class="small-board" id="b0" data-content="">
+                <div class="small-board" id="b0" data-content="" data-placeable="true">
                     <div class="small-board-grid">
                         <div class="cell c0" data-content=""></div>
                         <div class="cell c1" data-content=""></div>
@@ -30,7 +30,7 @@
                     </div>
                     <div class="winner-overlay"></div>
                 </div>
-                <div class="small-board" id="b1" data-content="">
+                <div class="small-board" id="b1" data-content="" data-placeable="true">
                     <div class="small-board-grid">
                         <div class="cell c0" data-content=""></div>
                         <div class="cell c1" data-content=""></div>
@@ -44,7 +44,7 @@
                     </div>
                     <div class="winner-overlay"></div>
                 </div>
-                <div class="small-board" id="b2" data-content="">
+                <div class="small-board" id="b2" data-content="" data-placeable="true">
                     <div class="small-board-grid">
                         <div class="cell c0" data-content=""></div>
                         <div class="cell c1" data-content=""></div>
@@ -58,7 +58,7 @@
                     </div>
                     <div class="winner-overlay"></div>
                 </div>
-                <div class="small-board" id="b3" data-content="">
+                <div class="small-board" id="b3" data-content="" data-placeable="true">
                     <div class="small-board-grid">
                         <div class="cell c0" data-content=""></div>
                         <div class="cell c1" data-content=""></div>
@@ -72,7 +72,7 @@
                     </div>
                     <div class="winner-overlay"></div>
                 </div>
-                <div class="small-board" id="b4" data-content="">
+                <div class="small-board" id="b4" data-content="" data-placeable="true">
                     <div class="small-board-grid">
                         <div class="cell c0" data-content=""></div>
                         <div class="cell c1" data-content=""></div>
@@ -86,7 +86,7 @@
                     </div>
                     <div class="winner-overlay"></div>
                 </div>
-                <div class="small-board" id="b5" data-content="">
+                <div class="small-board" id="b5" data-content="" data-placeable="true">
                     <div class="small-board-grid">
                         <div class="cell c0" data-content=""></div>
                         <div class="cell c1" data-content=""></div>
@@ -100,7 +100,7 @@
                     </div>
                     <div class="winner-overlay"></div>
                 </div>
-                <div class="small-board" id="b6" data-content="">
+                <div class="small-board" id="b6" data-content="" data-placeable="true">
                     <div class="small-board-grid">
                         <div class="cell c0" data-content=""></div>
                         <div class="cell c1" data-content=""></div>
@@ -114,7 +114,7 @@
                     </div>
                     <div class="winner-overlay"></div>
                 </div>
-                <div class="small-board" id="b7" data-content="">
+                <div class="small-board" id="b7" data-content="" data-placeable="true">
                     <div class="small-board-grid">
                         <div class="cell c0" data-content=""></div>
                         <div class="cell c1" data-content=""></div>
@@ -128,7 +128,7 @@
                     </div>
                     <div class="winner-overlay"></div>
                 </div>
-                <div class="small-board" id="b8" data-content="">
+                <div class="small-board" id="b8" data-content="" data-placeable="true">
                     <div class="small-board-grid">
                         <div class="cell c0" data-content=""></div>
                         <div class="cell c1" data-content=""></div>
@@ -146,6 +146,7 @@
         </div>
         <div class="controlls">
             <h2>Buttons</h2>
+            <button type="reset" onclick="reset()">Reset</button>
         </div>
     </main>
     
