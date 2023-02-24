@@ -35,3 +35,12 @@ main {
     max-width: 20vw;
     background-color: #222;
 }
+
+#move-history  {
+    height: 8em;
+    overflow: scroll;
+}
+
+#move-history > p {
+    margin: 0.5em;
+}
